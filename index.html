@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#171717">
 </head>
 
@@ -53,11 +59,23 @@
 
     <section class="main container main--home">
         <div class="main__column">
-            <h2 class="main__title">Current Event</h2>
-            <div class="competitions">
-                <a class="competitions__item competitions__item--long" href="event">
-                    <img src="img/competition-img.jpg">
-                    <span class="is-visually-hidden">Diedamskopf</span>
+            <span class="main__flex-title">
+                <h2 class="main__title">Live Event</h2>
+                <select class="select-box">
+                    <option value="solo" selected>Solo</option>
+                    <option value="synchro">Synchro</option>
+                  </select>
+            </span>
+            <div class="competitions competitions--home">
+
+                <div class="text-box">
+                    <p class="text-box__paragraph">There is no live event at the moment.</p>
+                </div>
+
+                <a class="competitions__item competitions__item--long" href="event" style="background-image: url('img/competition-small-img.jpg')">
+                    <span class="competitions__title">World Acro Cup</span>
+                    <span class="competitions__location">Oludeniz</span>
+                    <span class="competitions__date">28 jun - 02 jul</span>
                 </a>
             </div>
         </div>
@@ -80,6 +98,12 @@
                         <span class="is-visually-hidden">Youtube</span>
                     </a>
                 </div>
+            </div>
+        </div>
+        <div class="main__column">
+            <h2 class="main__title">Downloads</h2>
+            <div class="text-box">
+                <a class="text-box__link" href="files/sporting_code_s7_b_-_aerobatics_2022.pdf" target="_blank">- FAI Sporting Code Section 7b</a>
             </div>
         </div>
     </section>

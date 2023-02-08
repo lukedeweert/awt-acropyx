@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#171717">
 </head>
 
@@ -47,30 +53,70 @@
         </a>
     </nav>
 
-    <section class="main container">
+    <section class="main main--events container">
         <div class="main__column">
-            <h2 class="main__title">Current Event</h2>
+            <span class="main__flex-title">
+                <h2 class="main__title">Live Event</h2>
+                <select class="main__select-box select-box">
+                    <option value="solo" selected>Solo</option>
+                    <option value="synchro">Synchro</option>
+                  </select>
+            </span>
             <div class="competitions">
-                <a class="competitions__item competitions__item--long" href="event">
-                    <img src="img/competition-img.jpg" alt="">
-                    <span class="is-visually-hidden">Diedamskopf</span>
+                <div class="text-box">
+                    <p class="text-box__paragraph">There is no live event at the moment.</p>
+                </div>
+                <a class="competitions__item competitions__item--long" href="event" style="background-image: url('img/competition-small-img.jpg')">
+                    <span class="competitions__title">World Acro Cup</span>
+                    <span class="competitions__location">Oludeniz</span>
+                    <span class="competitions__date">28 jun - 02 jul</span>
                 </a>
             </div>
         </div>
         <div class="main__column">
-            <h2 class="main__title">Previous Events</h2>
+            <span class="main__flex-title">
+                <h2 class="main__title">Previous Events</h2>
+                <select class="main__select-box select-box">
+                    <option value="2021">2021</option>
+                    <option value="2022" selected>2022</option>
+                    <option value="2023">2023</option>
+                  </select>
+            </span>
             <div class="competitions">
-                <a class="competitions__item" href="event">
-                    <img src="img/competition-small-img.jpg" alt="">
-                    <span class="is-visually-hidden">Diedamskopf</span>
+                <a class="competitions__item" href="event" style="background-image: url('img/competition-small-img.jpg')">
+                    <span class="competitions__title">World Acro Cup</span>
+                    <span class="competitions__location">Oludeniz</span>
+                    <span class="competitions__date">28 jun - 02 jul</span>
                 </a>
-                <a class="competitions__item" href="event">
-                    <img src="img/competition-small-img.jpg" alt="">
-                    <span class="is-visually-hidden">Diedamskopf</span>
+                <a class="competitions__item" href="event" style="background-image: url('img/competition-small-img.jpg')">
+                    <span class="competitions__title">World Acro Cup</span>
+                    <span class="competitions__location">Oludeniz</span>
+                    <span class="competitions__date">28 jun - 02 jul</span>
                 </a>
-                <a class="competitions__item" href="event">
-                    <img src="img/competition-small-img.jpg" alt="">
-                    <span class="is-visually-hidden">Diedamskopf</span>
+                <a class="competitions__item" href="event" style="background-image: url('img/competition-small-img.jpg')">
+                    <span class="competitions__title">World Acro Cup</span>
+                    <span class="competitions__location">Oludeniz</span>
+                    <span class="competitions__date">28 jun - 02 jul</span>
+                </a>
+            </div>
+        </div>
+        <div class="main__column">
+            <h2 class="main__title">Future Events</h2>
+            <div class="competitions">
+                <a class="competitions__item" href="event" style="background-image: url('img/competition-small-img.jpg')">
+                    <span class="competitions__title">World Acro Cup</span>
+                    <span class="competitions__location">Oludeniz</span>
+                    <span class="competitions__date">28 jun - 02 jul</span>
+                </a>
+                <a class="competitions__item" href="event" style="background-image: url('img/competition-small-img.jpg')">
+                    <span class="competitions__title">World Acro Cup</span>
+                    <span class="competitions__location">Oludeniz</span>
+                    <span class="competitions__date">28 jun - 02 jul</span>
+                </a>
+                <a class="competitions__item" href="event" style="background-image: url('img/competition-small-img.jpg')">
+                    <span class="competitions__title">World Acro Cup</span>
+                    <span class="competitions__location">Oludeniz</span>
+                    <span class="competitions__date">28 jun - 02 jul</span>
                 </a>
             </div>
         </div>

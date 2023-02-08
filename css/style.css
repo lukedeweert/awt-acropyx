@@ -104,8 +104,21 @@ button {
     justify-content: flex-start;
 }
 
+.main--home .main__column:last-child {
+    order: 3;
+}
+
 .main--no-padding {
     padding: 100px 0 80px;
+}
+
+.main--events {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.main--events .main__title {
+    margin-left: 25px;
 }
 
 .main__column {
@@ -116,11 +129,33 @@ button {
     margin-bottom: 30px;
 }
 
+.main__flex-title {
+    display: flex;
+    justify-content: space-between;
+}
+
 .main__title {
-    width: 100%;
     font-size: 18px;
     margin: 0 0 10px;
     font-weight: 700;
+}
+
+.main__select-box {
+    margin-right: 25px;
+}
+
+.select-box {
+    height: 22px;
+    background-color: #F5F7F8;
+    border: 1px solid rgb(183, 183, 183);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 10px;
+    color: #000;
+    cursor: pointer;
+    width: 80px;
 }
 
 .header {
@@ -132,6 +167,7 @@ button {
     background-position: right;
     background-repeat: no-repeat;
     padding: 25px;
+    align-items: center;
 }
 
 .header--fixed {
@@ -143,7 +179,7 @@ button {
 }
 
 .header__logo {
-    width: 53px;
+    height: 43px;
 }
 
 .header__title-container {
@@ -166,17 +202,30 @@ button {
 
 .button {
     margin: 0 auto;
-    display: block;
-    font-weight: 700;
+    display: inline-block;
+    font-weight: 600;
     color: #fff;
-    padding: 13px 23px;
-    border-radius: 10px;
+    padding: 10px 25px;
+    border-radius: 5px;
     transition: 0.2s;
-    background-color: #171717;
+    background-color: #FB8B24;
+    border: 3px solid #FB8B24;
+}
+
+.button--alternative {
+    background-color: transparent;
+    color: #FB8B24;
 }
 
 .button:hover {
-    background-color: #262626;
+    background-color: #f99f4b;
+    border-color: #f99f4b;
+}
+
+.button--alternative:hover {
+    background-color: transparent;
+    border-color: #f99f4b;
+    color: #f99f4b;
 }
 
 .button--margin {
@@ -230,6 +279,7 @@ button {
 .not-found {
     text-align: center;
     margin-top: 100px;
+    width: 100%;
 }
 
 .not-found h1 {
@@ -246,9 +296,16 @@ button {
 
 .competitions {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
     width: 100%;
+    overflow-x: auto;
+    padding: 0 25px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.competitions::-webkit-scrollbar {
+    display: none;
 }
 
 .competitions__header {
@@ -256,26 +313,73 @@ button {
 }
 
 .competitions__item {
-    width: calc(50% - 10px);
+    width: 85%;
+    min-width: 85%;
     display: block;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12);
     align-self: start;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 160px;
+    color: #fff;
+    padding: 20px;
+    text-shadow: 0px 0px 4px #707070;
+}
+
+.competitions__item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
     transition: 0.2s;
 }
 
-.competitions__item:hover {
-    box-shadow: none;
+.competitions__item:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.competitions__item--long {
-    width: 100%;
-}
-
-.competitions__item img {
-    width: 100%;
+.competitions__item span {
+    z-index: 2;
     display: block;
+}
+
+.competitions--home {
+    padding: 0;
+}
+
+.competitions__item.competitions__item--long {
+    width: 100%;
+    min-width: 100%;
+}
+
+.competitions__title {
+    font-weight: 700;
+    font-size: 17px;
+    position: relative;
+}
+
+.competitions__location {
+    color: rgb(223, 223, 223);
+    font-weight: 500;
+    font-size: 12px;
+    position: relative;
+    margin-top: 3px;
+}
+
+.competitions__date {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-size: 12px;
+    color: rgb(223, 223, 223);
+    font-weight: 500;
 }
 
 .text-box {
@@ -288,7 +392,6 @@ button {
     flex-direction: column;
     gap: 12px;
     line-height: 150%;
-    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12);
 }
 
 .text-box ol,
@@ -307,6 +410,16 @@ button {
 .text-box__paragraph {
     margin: 0;
     padding: 0;
+}
+
+.text-box__link {
+    color: #FB8B24;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.text-box__link:hover {
+    text-decoration: underline;
 }
 
 .text-box__paragraph--bold {
@@ -546,8 +659,6 @@ button {
     width: 12%;
 }
 
-.icons {}
-
 .icons__item {
     display: inline-block;
     margin: 0 5px;
@@ -577,6 +688,26 @@ button {
 
     .nav__link {
         margin: 0 60px;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .main--events .main__title {
+        margin-left: 0;
+    }
+
+    .main__select-box {
+        margin: 0;
+    }
+
+    .competitions {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .competitions__item {
+        width: calc(50% - 10px);
+        min-width: auto;
     }
 }
 
