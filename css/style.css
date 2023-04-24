@@ -162,10 +162,6 @@ button {
     background-color: #171717;
     display: flex;
     justify-content: space-between;
-    background-image: url('../img/lines.svg');
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
     padding: 25px;
     align-items: center;
 }
@@ -442,6 +438,12 @@ button {
     justify-content: flex-start;
 }
 
+.avatar__synchroteam {
+    display: block;
+    margin-top: 0;
+    font-size: 18px;
+}
+
 .avatar__item {
     width: calc(33% - 14px);
     position: relative;
@@ -641,7 +643,8 @@ button {
     height: 21px;
 }
 
-.ranking-list__pilot {
+.ranking-list__pilot,
+.ranking-list__team {
     width: 60%;
 }
 
@@ -657,6 +660,21 @@ button {
 
 .ranking-list__pts {
     width: 12%;
+}
+
+.ranking-list__result--synchro .ranking-list__pilot,
+.ranking-list__result--synchro .ranking-list__teamname {
+    display: block;
+}
+
+.ranking-list__result--synchro .ranking-list__pilot {
+    font-weight: 500;
+    padding-left: 15px;
+    line-height: 150%;
+}
+
+.ranking-list__teamname {
+    margin-bottom: 10px;
 }
 
 .icons__item {
